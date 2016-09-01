@@ -1,5 +1,6 @@
 # ASE-Assignments
 Lab assignments
+
  Lab 1: https://github.com/alekhyapolavarapu/ASE-Assignments/wiki/Lab-1
  
  Lab 2:https://github.com/alekhyapolavarapu/ASE-Assignments/wiki/Lab-2
