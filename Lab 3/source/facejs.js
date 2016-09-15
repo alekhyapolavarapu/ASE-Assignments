@@ -7,7 +7,7 @@
 angular.module('myApp', [])
 
 
-    .controller('View1Ctrl', function ($scope, $http) {
+    .controller('mycontroller', function ($scope, $http) {
         $scope.facepredlist = new Array();
        // $scope.mostRecentReview;
         $scope.getpredictions = function () {
