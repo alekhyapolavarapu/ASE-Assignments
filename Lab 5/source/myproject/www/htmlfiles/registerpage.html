@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="manifest" href="manifest.json">
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="cordova.js"></script>
+  <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="register">
+<ion-pane>
+  <div class="container-fluid">
+<div class="row" style="margin-top: 30px">
+  <div class="col-md-6 col-md-offset-5" style="margin-top: 30px">
+    <ion-header-bar class="bar-royal">
+    <h2> REGISTER PAGE</h2>
+    </ion-header-bar></div></div>
+    <ion-content >
+  <div class="row" style="margin-top: 30px">
+  <div class=" col-xs-12 col-md-5 col-md-offset-4" style="margin-top: 10px">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputUsername">Username</label>
+        <input type="username" class="form-control" id="exampleInputUsername" placeholder="username">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+
+      <button type="button" onclick="window.location='http://www.google.com'" class="btn btn-primary">Register</button>
+       Registered User? <a href="http://localhost:63342/myproject/www/loginpage.html?_ijt=50vt0sagv412at22d6nrqlkqao">login</a>
+    </form>
+  </div>
+</div>
+    </ion-content>
+  </div>
+</ion-pane>
+</body>
+</html>
