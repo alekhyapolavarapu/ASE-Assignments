@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="1"
+    tools:context="tutorial.maps.google.googlemapsapplication.photobutton">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="choosefromgallery"
+        android:id="@+id/bgallery"
+        android:layout_weight="0.62"
+        android:onClick="onImageGalleryClicked"
+        android:nestedScrollingEnabled="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="take photo"
+        android:id="@+id/bphoto"
+        android:layout_weight="0.48"
+        android:onClick="onPhotoclicked" />
+</LinearLayout>
