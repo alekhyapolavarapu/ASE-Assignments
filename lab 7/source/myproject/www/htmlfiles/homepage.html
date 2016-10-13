@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="js/homeapp.js"></script>
+  <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+<body class="body">
+<ion-pane>
+  <ion-header-bar ></ion-header-bar>
+<ion-content>
+  <div  ng-controller="View1Ctrl" >
+    <div class="menu" id="div_SearchContainer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-md-9 col-md-offset-2">
+          <h1 align="absolute" > get the photos taken in particular palce in map view</h1></div></div>
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-4" style="margin-top: 30px">
+            <div class="input-group">
+          <input type="text"  class="form-control" id="txt_placeName" placeholder="Enter the place" />
+          <div class="row">
+          <div class="col-xs-12 col-md-12">
+              <button  class="btn btn-primary" style="margin-top: 30px;" id="btn_getReview" ng-click="getVenues()">Get places</button></div>
+              <div class="col-xs-12 col-md-12">
+                <button  class="btn btn-primary" style="margin-top: 30px;" id="btn_getReview" onclick="window.location='http://localhost:63342/myproject/www/loginpage.html?_ijt=50vt0sagv412at22d6nrqlkqao'">Get Current location</button></div></div>
+              </div></div></div>
+
+
+    </div>
+
+
+
+    <div id="div_VenueList">
+
+
+    </div>
+    </div>
+</ion-content>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2Cg_bwKT_Eb6yXuj8AYSWPsn9WtIZWSI&sensor=true"></script>
+  </ion-pane>
+    </body>
+</html>
