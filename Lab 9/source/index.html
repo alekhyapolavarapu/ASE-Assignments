@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="http://materializecss.com/templates/parallax-template/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://materializecss.com/css/prism.css" rel="stylesheet">
+    <link href="http://materializecss.com/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+   
+    <title>Height converter</title>
+    <div class="container">
+        <div  style="text-align: center;font-family: Arial"><h1>Node Js Private Mash up</h1></div>
+        </div>
+
+</head>
+    <style>body{
+    background-image: url("water.jpg");
+}</style>
+<body ng-app=myApp>
+<div ng-controller=ViewCtrl>
+    <div class="row" style="margin-top: 30px">
+  <div class="col-md-5 col-md-offset-4" style="margin-top: 10px">
+    <form>
+    <div class="form-group">
+        
+        <input type="username" class="form-control" id="exampleInputUsername" placeholder="Enter image url">
+      </div>
+    
+<br><br>
+      </form></div></div>
+    <div class="row">
+  <div class="col-md-8 col-md-offset-4">
+
+    <button class="btn btn-success" style="margin-left: 190px" ng-click="getTags()">Get</button>
+      </div></div>
+    <div class="container" style="margin-right: 50px">
+        <table>
+            <tbody>
+            <tr>
+                <td ng-repeat ="tags in tagList">
+                   {{tags.tag}}
+
+                </td>
+            </tr></tbody></table>
+        </div>
+    <div class="row" style="margin-top: 30px">
+        <div class="col-md-5 col-md-offset-4" style="margin-top: 10px">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <button class="btn btn-warning" onclick="responsiveVoice.speak(tags.tag);" style="margin-left: 210px; height: 30px">play</button>
+            <div style="margin-top: 10px; margin-left: 100px;">
+            <audio controls>
+                <source src="responsiveVoice.speak(tags.tag);" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio></div>
+</div></div>
+</div>
+</body>
+</html>
