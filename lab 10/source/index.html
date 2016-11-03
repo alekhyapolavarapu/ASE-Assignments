@@ -1,0 +1,47 @@
+<html ng-app="demoMongo" ng-controller="MongoRestController" class="h1">
+<head >
+    <title>Registration</title>
+
+</head>
+<body background="water.jpg">
+        <div class="container">
+        <form class="contact_form"  ng-submit="insertData()" name="contact_form">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+           <center><h1>Register</h1></center>
+
+                     <input type="text" class="form-control" name="fname" placeholder="Enter First Name" ng-model="formData.fname" required />
+<br>
+                 <input type="text" class="form-control" name="lname" ng-model="formData.lname" placeholder="Last Name" required />
+<br>
+                 <input type="email" class="form-control" name="email" ng-model="formData.email" placeholder="xyz@gmail.com" required />
+<br>
+                 <input type="password" name="password" class="form-control" ng-model="formData.password" placeholder=" Enter Password">
+<br>
+                 <input type="password" name="cpassword" class="form-control" ng-model="formData.cpassword" placeholder="Repeat Password">
+<br>
+          <div class="row"><div class="col-md-6 col-md-offset-5"><input type="submit" class="btn btn-success" name="Sign Up"  value="Register"/></div></div>
+            </div></div>
+        </form>
+
+        <input type="button" value="Login" class="button" onclick="go()"/>
+        <script>
+            function go() {
+                window.location='Users.html';
+            }
+        </script>
+
+            </div>
+
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+<script src="app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+
+        </script><script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
+
+</body>
+</html>

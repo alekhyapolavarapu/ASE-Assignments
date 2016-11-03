@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="h1">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+    <script src="app.js"></script>
+    <script src="nodejs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
+
+</head>
+<body style="margin-left: 20px" background="water.jpg">
+<style>
+    .card {
+        position: relative;
+        margin: 0.5rem 0 1rem 0;
+        background-color: #fff;
+        transition: box-shadow .25s;
+        border-radius: 2px;
+    }
+</style>
+<div class="row"><div class="col-md-10 col-md-offset-2" style="margin-left: 20px;">
+    <div class="card">
+<table class="table" >
+    <div id="container" class="g1">
+
+    </div><br>
+
+</table></div></div></div>
+
+<input type="button" class="btn btn-default" value="update" id="update_btn" onclick = "showdiv()" />
+    <script>
+        function showdiv() {
+            document.getElementById('update').style.display = "block";
+            document.getElementById('update_btn').style.display = "none";
+        }
+    </script>
+    <div id="update" style="display:none;">
+       <center><h1>Update User Details</h1></center>
+        <div class="container"><div class="row"><div class="col-md-6 col-md-offset-4">
+        <form method="post" action="http://127.0.0.1:8081/update">
+
+            <input type="text" class="form-control" name="id2" id="id2" placeholder="Enter the ID" /><br>
+
+
+            <input type="text" class="form-control" name="fn" placeholder="Enter First Name" /><br>
+
+            <input type="text" class="form-control" name="ln" placeholder="Enter Last Name"/><br>
+
+            <input type="text" class="form-control" name="ml" placeholder="Enter E-Mail"/><br>
+            <input type="submit" class="btn btn-default" value="Update" >
+        </form></div></div></div></div>
+    <input type="button" class="btn btn-default" value="Delete" id="delete_btn" onclick = "showdiv1()" />
+    <script>
+        function showdiv1() {
+            document.getElementById('delete').style.display = "block";
+            document.getElementById('delete_btn').style.display = "none";
+        }
+    </script>
+    <div class="fl2"id="delete" style="display:none;">
+       <center><h2>Delete User Record</h2></center>
+        <div class=""container"><div class="row"><div class="col-md-6 col-md-offset-4">
+        <form method="post" action="http://127.0.0.1:8081/delete" autocomplete="on">
+            <input type="text" class="form-control" name="id1" id="id1" placeholder="Enter the ID from above table" /><br>
+            <input type="submit" class="btn btn-default" value="Delete"  >
+
+        </form></div></div></div></div>
+    <script>    function sync() {
+        document.getElementById('id1').value=document.getElementById('id2').value;
+    }
+    </script>
+
+
+
+
+</body>
+</html>

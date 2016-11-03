@@ -6,25 +6,26 @@
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
 
    
     <title>Height converter</title>
     <div class="container">
-        <div  style="text-align: center;font-family: Arial"><h1>Height Converter</h1></div>
+        <div  style="text-align: center;font-family: Arial"><h1>Node Js Private Mash up</h1></div>
         </div>
 
 </head>
     <style>body{
     background-image: url("water.jpg");
 }</style>
-<body ng-app=converter>
-<div ng-controller=convertctrl>
+<body ng-app=myApp>
+<div ng-controller=ViewCtrl>
     <div class="row" style="margin-top: 30px">
   <div class="col-md-5 col-md-offset-4" style="margin-top: 10px">
     <form>
     <div class="form-group">
         
-        <input type="username" class="form-control" id="exampleInputUsername" placeholder="Enter Height in cm">
+        <input type="username" class="form-control" id="exampleInputUsername" placeholder="Enter image url">
       </div>
     
 <br><br>
@@ -32,22 +33,22 @@
     <div class="row">
   <div class="col-md-8 col-md-offset-4">
 
-    <button class="btn btn-success" style="margin-left: 190px" ng-click="bmi()">Convert</button>
+    <button class="btn btn-success" style="margin-left: 190px" ng-click="getTags()">Get</button>
       </div></div>
     <div class="container">
-    <p ng-model=cal>
-        <br><br>
-
-        <div class="row" style="margin-top: 30px">
-  <div class="col-md-5 col-md-offset-4" style="margin-top: 10px">
-      <div class="bg-success" style="height: 30px">Your height in inches:&nbsp&nbsp 64.1732 </div></div></div><br>
-        <div class="row" style="margin-top: 30px">
-  <div class="col-md-5 col-md-offset-4" style="margin-top: 10px">
-      <div class="bg-success" style="height: 30px">Your height in feet:&nbsp&nbsp 5.347</div></div></div><br>
-
-
-    </p>
+        <table>
+            <tbody>
+            <tr>
+                <td ng-repeat="tags in tagList">
+                    <div class="chip">
+                        {{tags.tag}}
+                    </div>
+                </td>
+            </tr></tbody></table>
         </div>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <input onclick="responsiveVoice.speak('Hello World');" type="button" value="Play" />
+
 </div>
 </body>
 </html>
